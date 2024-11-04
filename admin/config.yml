@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main  # Change this if your main branch has a different name
+
+media_folder: "images/uploads"       # Media files location in repo
+public_folder: "/images/uploads"     # Path used in the HTML
+
+collections:
+  - name: "work"
+    label: "Work"
+    folder: "content/work"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Client", name: "client", widget: "string" }
+      - { label: "Studio", name: "studio", widget: "string" }
+      - { label: "Outcomes", name: "outcomes", widget: "string", allow_add: true }
+      - { label: "Scope of Work", name: "scope", widget: "string", allow_add: true }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Images", name: "images", widget: "list", allow_add: true }
